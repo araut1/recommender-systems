@@ -15,3 +15,6 @@ References:
 
 [1] Structured low-rank matrix completion for forecasting in time series analysis
 Jonathan Gillard, Konstantin Usevich
+
+[2] Matrix Completion With Noise
+DOI:- 10.1109/JPROC.2009.2035722
