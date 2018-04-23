@@ -11,3 +11,7 @@ You are given a partially filled out rating data matrix with this assignment. Th
 
 The output text file must follow the format of one element of the matrix as one row beginning with the element for the first user for the first item, followed by the first user for the second item, …, the first user for the last item, the second user for the first item, …, the second user for the last item, …, the last user for the first item, …, the last user for the last item; each row of the file has three numbers: user ID number, item ID number, and the rating value, separated by a space.
 
+References:
+
+[1] Structured low-rank matrix completion for forecasting in time series analysis
+Jonathan Gillard, Konstantin Usevich
