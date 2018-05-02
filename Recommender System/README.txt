@@ -1,8 +1,5 @@
-CS535-Introduction to Data Mining
-Spring 2018
+
 Author: Abhisek Dinkar Raut 
-B-Number: B00718042
-email Id: araut1@binghamton.edu
 
 
 ABOUT:
@@ -68,4 +65,4 @@ REFERENCE:
 
 ASSUMPTION:
 
-  Apache Ant(TM) version 1.9.9 and Java Runtime Environment(JRE™) installed on all department machine.
+  Apache Ant(TM) version 1.9.9 and Java Runtime Environment(JREâ„¢) installed on all department machine.
