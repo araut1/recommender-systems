@@ -1,0 +1,38 @@
+<project name="araut1_java" default="compile_all" basedir=".">
+    <property name="BUILD.compiler" value="modern"/>
+    <property name="src" value="src"/>
+    <property name="BUILD" value="BUILD"/>
+    <property name="classes" value="${BUILD}/classes"/>
+    <property name="doc" value="doc"/>
+    <target name="all" depends="compile_all"/>
+    <target name="compile_all" depends="recommenderSystem"/>
+    <!-- Clean, remove the executable  -->
+    <target name="clean">
+        <delete dir="${BUILD}"/>
+    </target>
+    <!-- Prepare target directories -->
+    <target name="prepare">
+        <mkdir dir="${BUILD}"/>
+        <mkdir dir="${classes}"/>
+    </target>
+    <target name="jar">
+        <mkdir dir="${BUILD}/jar"/>
+        <jar destfile="${BUILD}/jar/recommenderSystem.jar" basedir="${BUILD}/classes">
+            <manifest>
+                <attribute name="Main-Class" value="src.dm_project"/>
+            </manifest>
+        </jar>
+    </target>
+    <!-- ** -> Including all subdirectories -->
+    <!-- * -> All files in the current directory -->
+    <!-- For just java files -> *.java -->
+    <target name="recommenderSystem" depends="prepare">
+        <javac includeantruntime="false" srcdir="${src}" includes="**" excludes="**/package.html" destdir="${classes}" classpath="${classes}" debug="on" optimize="on" deprecation="off"/>
+    </target>
+    <target name="run" depends="jar">
+        <java jar="${BUILD}/jar/recommenderSystem.jar" fork="true">
+            <arg value="${arg0}"/>
+            <arg value="${arg1}"/>
+        </java>
+    </target>
+</project>
